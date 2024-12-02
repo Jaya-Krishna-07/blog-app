@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
 import HomePage from './routes/HomePage.jsx'
@@ -11,7 +10,7 @@ import WritePage from './routes/WritePage.jsx'
 import LoginPage from './routes/LoginPage.jsx'
 import RegisterPage from './routes/RegisterPage.jsx'
 
-const routes = createBrowserRouter([
+const router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
@@ -45,6 +44,6 @@ const routes = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider routes={routes} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
