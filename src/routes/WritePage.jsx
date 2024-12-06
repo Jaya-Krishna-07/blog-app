@@ -7,7 +7,7 @@ const WritePage = () => {
   const { isLoaded, isSignedIn } = useUser();
 
   if (!isLoaded) return <div>Loading...</div>;
-  if (!isLoaded && !isSignedIn) return <div>You should log in.</div>;
+  if (!isSignedIn) return <div>You should log in.</div>;
 
 
   return (
